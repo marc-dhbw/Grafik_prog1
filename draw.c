@@ -5,20 +5,20 @@
 #include <math.h>
 #include "draw.h"
 
-void printShape(char map[HEIGHT+1][WIDTH+1]){
-    for (int i = 0; i < HEIGHT+1; ++i) {
-        for (int j = 0; j < WIDTH+1; ++j) {
+void printShape(char map[Y_SIZE][X_SIZE]){
+    for (int i = 0; i < Y_PIXEL + 1; ++i) {
+        for (int j = 0; j < X_PIXEL + 1; ++j) {
             printf("%c",map[i][j]);
         }
         printf("\n");
     }
 }
 
-void setPixel(int x, int y, char map[HEIGHT+1][WIDTH+1]){
+void setPixel(int x, int y, char map[Y_SIZE][X_SIZE]){
     map[y][x] = '#';
 }
 
-void drawLine(int x1, int y1, int x2, int y2,char map[HEIGHT+1][WIDTH+1]) {
+void drawLine(int x1, int y1, int x2, int y2,char map[Y_SIZE][X_SIZE]) {
     int dx = abs(x2 - x1);
     int dy = abs(y2 - y1);
     int sx = (x1 < x2) ? 1 : -1;
@@ -44,7 +44,7 @@ void drawLine(int x1, int y1, int x2, int y2,char map[HEIGHT+1][WIDTH+1]) {
         }
     }
 }
-void drawCircle(int x0, int y0, int radius,char map[HEIGHT+1][WIDTH+1]){
+void drawCircle(int x0, int y0, int radius,char map[Y_SIZE][X_SIZE]){
     int f = 1 - radius;
     int ddF_x = 0;
     int ddF_y = -2 * radius;
