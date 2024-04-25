@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include <assert.h>
 #include "draw.h"
 
@@ -52,6 +51,6 @@ int main() {
     free(points);
     saveToFile(map);
 
-    printf("File successfully created with N=%d", N);
+    printf("Grafik wurde erfolgreich erstellt mit N=%d", N);
     return 0;
 }

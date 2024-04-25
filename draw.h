@@ -5,9 +5,9 @@
 #ifndef GRAFIK_PROG1_DRAW_H
 #define GRAFIK_PROG1_DRAW_H
 
-#define X_SIZE 1000
-#define Y_SIZE 1000
-#define RADIUS  (X_SIZE-1) / 2
+#define X_SIZE 400
+#define Y_SIZE 400
+#define RADIUS  ((X_SIZE-1) / 2)
 #define FULL_CIRCLE_ANGLE 360
 
 typedef struct {
